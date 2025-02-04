@@ -1,5 +1,3 @@
-import { form } from "motion/react-client"
-
 export default function NewNote ({setOpenEditor,openEditor, notes , setNotes}) {
   function handleBack() {
     setOpenEditor(!openEditor)
@@ -11,8 +9,8 @@ export default function NewNote ({setOpenEditor,openEditor, notes , setNotes}) {
     const formObj = Object.fromEntries(formData);
     formObj.id = crypto.randomUUID()
     formObj.date = new Date().toLocaleDateString("en-EN", { hour: "numeric", minute: "numeric", year: "numeric"}),
-    console.log(formObj);
-    console.log(notes);
+    // console.log(formObj);
+    // console.log(notes);
     setNotes([formObj, ...notes]);
     console.log(notes);
     

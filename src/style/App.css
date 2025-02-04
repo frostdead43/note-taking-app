@@ -21,6 +21,9 @@ header h2 {
 
 /* Sidebar Component */
 
+.hidden {
+  display: none;
+}
 
 .sidebar-area {
   padding: 20px 16px;
@@ -86,8 +89,8 @@ header h2 {
   border: none;
 }
 
-.menu-bar:active {
-  background-color: blue;
+.menu-bar button:focus {
+  background-color: rgba(235, 241, 255, 1);
 }
 
 
@@ -336,3 +339,16 @@ textarea {
   letter-spacing: -0.20000000298023224px;
 }
 
+/* Details Component */
+
+.detail {
+  color: rgba(14, 18, 27, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.5px;
+}
+
+.asd textarea {
+  background-color: white;
+}
