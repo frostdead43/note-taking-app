@@ -30,11 +30,9 @@ export default function Details({notes, openDetails}) {
           </div>
       </div>
       <hr />
-      <div className="asd">
-        <textarea disabled name="" id="">
-          {y.notes}
-        </textarea>
-      </div>
+        <div className="asd">
+          <textarea disabled defaultValue={y.notes}></textarea>
+        </div>
       </div>
         )}
     </div>
