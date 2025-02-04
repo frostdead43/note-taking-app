@@ -17,7 +17,7 @@ export default function MenuBar() {
     },
     {
       url:'/Archive',
-      component:<Archive/>
+      component:<Archive />
     },
     {
       url:'/Search',

@@ -10,17 +10,22 @@ export default function Sidebar({notes,setNotes}) {
   function handleOpenNote() {
     setOpenEditor(!openEditor)
   }
-  
+
+
   function handleOpenDetails(x) {
-   setOpenDetails([x])
+   setOpenDetails(x)
    setIsDetail(!isDetail);
    console.log(openDetails)
+  }
+
+  function handleGoBack() {
+    setIsDetail(false); 
   }
 
   return (
     <div className="sidebar-area">
       {isDetail ? (
-        <Details openDetails={openDetails} />
+        <Details openDetails={openDetails} setOpenDetails={setOpenDetails} notes={notes} setNotes={setNotes}  handleGoBack={handleGoBack}/>
       ) : (
         !openEditor ? (
           <Fragment>
