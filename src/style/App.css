@@ -135,7 +135,7 @@ header h2 {
 }
 
 
-.archive h3 {
+.archive h4 {
   color: rgba(14, 18, 27, 1);
   font-size: 16px;
   font-weight: 600;
@@ -163,6 +163,12 @@ header h2 {
   letter-spacing: -0.20000000298023224px;
 }
 
+
+/* ArchiveDetail Component */
+
+.archiveDetail-area {
+  padding: 20px 16px;
+}
 
 
 
@@ -315,6 +321,7 @@ header h2 {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 10px;
 }
 
 .note-input h6 {
@@ -379,6 +386,7 @@ textarea {
   font-weight: 700;
   line-height: 28.8px;
   letter-spacing: -0.5px;
+  margin-top: 24px;
 }
 
 .asd textarea {
@@ -443,6 +451,10 @@ dialog p {
   font-weight: 500;
   line-height: 16.8px;
   letter-spacing: -0.20000000298023224px;
+}
+
+.archive-modal-button {
+  background-color: rgba(51, 92, 255, 1) !important; 
 }
 
 

@@ -1,10 +1,20 @@
 import { details } from "motion/react-client";
 import { Fragment, useRef } from "react";
+
 export default function Details({notes,openDetails,setNotes, handleGoBack, setArchiveNotes, archiveNotes  , setOpenDetails}) {
 const dialogRef = useRef(null)
+const archiveRef = useRef(null)
 
   function handleOpenModal() {
     dialogRef.current.showModal();
+  }
+
+  function  handleOpenArchiveModal()  {
+    archiveRef.current.showModal();
+  }
+
+  function handleCloseArchiveModal() {
+    archiveRef.current.close();
   }
 
   function handleCloseModal() {
@@ -21,9 +31,9 @@ function handleArchive(id) {
  const archived = notes.find(x => x.id === id);
  setNotes(notes.filter(x => x.id !== id))
  setArchiveNotes([...archiveNotes, archived]);
- console.log(archived);
- console.log(archiveNotes)
- console.log(archived.id);
+//  console.log(archived);
+//  console.log(archiveNotes)
+//  console.log(archived.id);
 }
   
   // console.log(notes);
@@ -35,10 +45,20 @@ function handleArchive(id) {
         <h4 onClick={handleGoBack}>Go back</h4>
         <div className="note-flex">
           {notes.map(y => (
+          y.id === openDetails.id && (
             <Fragment key={y.id}>
             <img src="/assets/images/delete-icon.svg" onClick={handleOpenModal}/>
-            <img onClick={() => handleArchive(y.id)} src="/assets/images/archive-icon.svg"/>
+            <img onClick={handleOpenArchiveModal} src="/assets/images/archive-icon.svg"/>
+            <dialog ref={archiveRef}>
+              <h3>Archive Note</h3>
+              <p>Are you sure you want to archive this note? You can find it in the Archived Notes section and restore it anytime.</p>
+              <div className="modal-buttons">
+                <button onClick={handleCloseArchiveModal}>Cancel</button>
+                <button className="archive-modal-button" onClick={() => handleArchive(y.id)}>Archive Notes</button>
+              </div>
+          </dialog>
             </Fragment>
+            )
           ))}
           <h5 onClick={handleGoBack}>Cancel</h5>
           <button>Save Note</button>

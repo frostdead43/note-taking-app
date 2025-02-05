@@ -6,9 +6,14 @@ export default function Sidebar({notes,setNotes, archiveNotes,setArchiveNotes}) 
   const [openEditor,setOpenEditor] = useState(false);
   const [openDetails,setOpenDetails] = useState(null);
   const [isDetail, setIsDetail] = useState(false);
+ 
 
   function handleOpenNote() {
     setOpenEditor(!openEditor)
+  }
+
+  function handleGoBack() {
+    setIsDetail(false); 
   }
 
 
@@ -18,9 +23,7 @@ export default function Sidebar({notes,setNotes, archiveNotes,setArchiveNotes}) 
    console.log(openDetails)
   }
 
-  function handleGoBack() {
-    setIsDetail(false); 
-  }
+ 
 
   return (
     <div className="sidebar-area">

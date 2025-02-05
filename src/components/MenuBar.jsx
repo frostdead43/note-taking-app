@@ -11,6 +11,9 @@ import NewNote from './NewNote'
 export default function MenuBar() {
   const [notes, setNotes] = useState([]);
   const [archiveNotes, setArchiveNotes] = useState([]);
+  
+
+ 
   const routes = [
     {
       url:'/',
@@ -18,7 +21,7 @@ export default function MenuBar() {
     },
     {
       url:'/Archive',
-      component:<Archive archiveNotes={archiveNotes}/>
+      component:<Archive archiveNotes={archiveNotes} setArchiveNotes = {setArchiveNotes} notes={notes} setNotes={setNotes}/>
     },
     {
       url:'/Search',
@@ -30,7 +33,7 @@ export default function MenuBar() {
     },
     {
       url:'/Tags',
-      component: <Tags />
+      component: <Tags  notes={notes}/>
     },
    
     
