@@ -9,15 +9,16 @@ import Sidebar from "./Sidebar";
 import NewNote from './NewNote'
 
 export default function MenuBar() {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState([]);
+  const [archiveNotes, setArchiveNotes] = useState([]);
   const routes = [
     {
       url:'/',
-      component: <Sidebar notes={notes} setNotes={setNotes} />
+      component: <Sidebar archiveNotes = {archiveNotes} setArchiveNotes = {setArchiveNotes} notes={notes} setNotes={setNotes} />
     },
     {
       url:'/Archive',
-      component:<Archive />
+      component:<Archive archiveNotes={archiveNotes}/>
     },
     {
       url:'/Search',

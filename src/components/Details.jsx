@@ -1,5 +1,6 @@
-import { useRef } from "react";
-export default function Details({notes,openDetails,setNotes, handleGoBack}) {
+import { details } from "motion/react-client";
+import { Fragment, useRef } from "react";
+export default function Details({notes,openDetails,setNotes, handleGoBack, setArchiveNotes, archiveNotes  , setOpenDetails}) {
 const dialogRef = useRef(null)
 
   function handleOpenModal() {
@@ -15,6 +16,15 @@ function handleDelete() {
     dialogRef.current.close();
     handleGoBack(); 
 }
+
+function handleArchive(id) {
+ const archived = notes.find(x => x.id === id);
+ setNotes(notes.filter(x => x.id !== id))
+ setArchiveNotes([...archiveNotes, archived]);
+ console.log(archived);
+ console.log(archiveNotes)
+ console.log(archived.id);
+}
   
   // console.log(notes);
   // console.log(openDetails);
@@ -24,8 +34,12 @@ function handleDelete() {
       <div className="new-note-header">
         <h4 onClick={handleGoBack}>Go back</h4>
         <div className="note-flex">
-          <img src="/assets/images/delete-icon.svg" onClick={handleOpenModal}/>
-          <img src="/assets/images/archive-icon.svg"/>
+          {notes.map(y => (
+            <Fragment key={y.id}>
+            <img src="/assets/images/delete-icon.svg" onClick={handleOpenModal}/>
+            <img onClick={() => handleArchive(y.id)} src="/assets/images/archive-icon.svg"/>
+            </Fragment>
+          ))}
           <h5 onClick={handleGoBack}>Cancel</h5>
           <button>Save Note</button>
         </div>

@@ -2,7 +2,7 @@ import { Fragment, useState } from "react"
 import NewNote from "./NewNote"
 import Details from "./Details";
 
-export default function Sidebar({notes,setNotes}) {
+export default function Sidebar({notes,setNotes, archiveNotes,setArchiveNotes}) {
   const [openEditor,setOpenEditor] = useState(false);
   const [openDetails,setOpenDetails] = useState(null);
   const [isDetail, setIsDetail] = useState(false);
@@ -25,7 +25,7 @@ export default function Sidebar({notes,setNotes}) {
   return (
     <div className="sidebar-area">
       {isDetail ? (
-        <Details openDetails={openDetails} setOpenDetails={setOpenDetails} notes={notes} setNotes={setNotes}  handleGoBack={handleGoBack}/>
+        <Details openDetails={openDetails} setOpenDetails={setOpenDetails} notes={notes} setNotes={setNotes}  handleGoBack={handleGoBack} archiveNotes = {archiveNotes} setArchiveNotes = {setArchiveNotes}/>
       ) : (
         !openEditor ? (
           <Fragment>
