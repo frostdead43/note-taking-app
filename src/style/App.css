@@ -52,9 +52,6 @@ header h2 {
   letter-spacing: -0.20000000298023224px;
 }
 
-
-
-
 .plus {
   background-color: rgba(51, 92, 255, 1);
   border-radius: 50%;
@@ -255,6 +252,55 @@ header h2 {
   background: url("./assets/images/search-icon.svg") no-repeat center left 5%;
   padding-left: 44px;
   outline-color: rgb(118, 124, 124);
+  margin-bottom: 20px;
+}
+
+.search-area {
+  padding: 20px 16px;
+}
+
+.search-area p {
+  color: rgba(43, 48, 59, 1);
+  margin-block: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+.search-area span {
+  font-weight: bolder;
+}
+
+.search h3 {
+  color: rgba(14, 18, 27, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+  letter-spacing: -0.30000001192092896px;
+}
+
+.search h5 {
+  background-color: rgba(243, 245, 248, 1);
+  border: 1px solid rgba(224, 228, 234, 1);
+  display: inline-block;
+  margin-block: 12px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+.search h6 {
+  color: rgba(43, 48, 59, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: -0.20000000298023224px;
+  border-bottom: 1px solid rgb(221, 211, 211);
+  padding-bottom: 12px;
 }
 
 
@@ -456,6 +502,9 @@ dialog p {
 .archive-modal-button {
   background-color: rgba(51, 92, 255, 1) !important; 
 }
+
+
+
 
 
 

@@ -25,7 +25,7 @@ export default function MenuBar() {
     },
     {
       url:'/Search',
-      component: <Search />
+      component: <Search notes={notes}/>
     },
     {
       url:'/Settings',
