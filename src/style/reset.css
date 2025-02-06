@@ -17,6 +17,8 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+
+
 /* 5. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;

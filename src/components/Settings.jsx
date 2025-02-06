@@ -22,7 +22,7 @@ function FontArea() {
 
   useEffect(() => {
     document.body.style.fontFamily = font;
-  }, [font])
+  }, [font]);
 
   return (
     <div className="font-area" >
@@ -105,9 +105,57 @@ function FontArea() {
 }
 
 function ThemeArea() {
-  return(
-    <div className="them">
 
+  const [theme,setTheme] = useState(false);
+
+  useEffect(() => {
+    if (theme) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [theme]);
+
+  return(
+    <div className="theme-area">
+       <h2>Color Theme</h2>
+      <p>Choose your color theme:</p>
+
+      <label htmlFor="light">
+        <div className="font">
+          <div className="font-flex">
+            <div>
+              <img src="./assets/images/light-mode-icon.svg"/>
+            </div>
+            <div>
+              <h3>Light Mode</h3>
+              <p>Pick a clean and classic light theme</p>
+            </div>
+          </div>
+          <div>
+            <input type="radio" id="light" name="theme"  checked={theme === false}  onChange={() => setTheme(false)} />
+            <span className="custom-radio"></span>
+          </div>
+        </div>
+      </label>
+
+      <label htmlFor="dark">
+        <div className="font">
+          <div className="font-flex">
+            <div>
+              <img src="./assets/images/dark-mode-icon.svg"/>
+            </div>
+            <div>
+              <h3>Dark Mode</h3>
+              <p>Select a sleek and modern dark theme</p>
+            </div>
+          </div>
+          <div>
+            <input type="radio" id="dark" name="theme" checked = {theme === true} onChange={() => setTheme(true)}/>
+            <span className="custom-radio"></span>
+          </div>
+        </div>
+      </label>
     </div>
   )
 }
