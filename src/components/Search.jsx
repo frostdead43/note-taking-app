@@ -20,17 +20,25 @@ import { Fragment, useState } from "react";
   console.log(notes);
 
   
-  return(
+  return (
     <div className="search-area">
       <h2>Search</h2>
       <input type="text" name="search" placeholder="Search..." onChange={handleSearch} />
-      <p>All notes matching <span>"{search}"</span> are displayed below.</p>
+      <p>
+        All notes matching <span>"{search}"</span> are displayed below.
+      </p>
       <div className="search">
-        {filterSearch.map(y => <Card  title={y.title}  tags={y.tags}  date={y.date} />)}
+        {filterSearch.length > 0 ? (
+          filterSearch.map((y) => (
+            <Card key={y.title} title={y.title} tags={y.tags} date={y.date} />
+          ))
+        ) : (
+          <h5 className="notFound-text">No notes match your search. Try a different keyword or create a new note.</h5>
+        )}
       </div>
     </div>
-  )
-}
+  );
+} 
 
 function Card({title, tags,date}) {
   return(
