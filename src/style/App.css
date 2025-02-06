@@ -211,20 +211,38 @@ header h2 {
 
 /* Font Component */
 
-.theme-area {
+.font-area {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.theme {
+.font-area h2 {
+  color: rgba(14, 18, 27, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.5px;
+  margin-top: 24px;
+}
+
+.font-area p {
+  color: rgba(43, 48, 59, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: -0.20000000298023224px;
+  margin-bottom: 20px;
+}
+
+.font {
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.theme h3 {
+.font h3 {
   color: rgba(14, 18, 27, 1);
   font-size: 14px;
   font-weight: 500;
@@ -232,12 +250,20 @@ header h2 {
   letter-spacing: -0.20000000298023224px;
 }
 
-.theme p {
+.font p {
   color: rgba(43, 48, 59, 1);
   font-size: 12px;
   font-weight: 400;
   line-height: 14.4px;
   letter-spacing: -0.20000000298023224px;
+}
+
+
+.font-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
 }
 
 
