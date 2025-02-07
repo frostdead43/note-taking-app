@@ -3,22 +3,24 @@ import { useEffect, useState } from "react"
 
 function Settings() {
   const [page , setPage] = useState("font")
+  const [font,setFont] = useState("inter")
+  const [theme,setTheme] = useState(false);
 
   return(
     <div className="setting-area">
       <h2>Settings</h2>
       <div className="buttons">
-        <button onClick={() => setPage('Theme')}><img src="./assets/images/light-mode-icon.svg" alt="Light Mode Icon"/></button>
-        <button onClick={() => setPage('font')}><img src="./assets/images/font-icon.svg" alt="Font Icon"/></button>
+        <button onClick={() => setPage('Theme')}><img src={!theme ? "./assets/images/light-mode-icon.svg" : "./assets/images/button-theme-dark.svg"}/></button>
+        <button onClick={() => setPage('font')}><img src= {!theme ? "./assets/images/font-icon.svg": "./assets/images/button-font-dark.svg"}/></button>
       </div>
-      {page === "font" ? <FontArea/> : <ThemeArea /> }
+      {page === "font" ? <FontArea font={font} setFont = {setFont}/> : <ThemeArea theme={theme} setTheme={setTheme}/> }
     </div>
   )
 }
 
-function FontArea() {
+function FontArea({font, setFont}) {
   
-  const [font,setFont] = useState("inter")
+ 
 
   useEffect(() => {
     document.body.style.fontFamily = font;
@@ -104,9 +106,9 @@ function FontArea() {
   )
 }
 
-function ThemeArea() {
+function ThemeArea({theme,setTheme}) {
 
-  const [theme,setTheme] = useState(false);
+ 
 
   useEffect(() => {
     if (theme) {
@@ -124,9 +126,9 @@ function ThemeArea() {
       <label htmlFor="light">
         <div className="font">
           <div className="font-flex">
-            <div>
-              <img src="./assets/images/light-mode-icon.svg"/>
-            </div>
+          <div>
+            <img src={!theme ? "./assets/images/light-mode-icon.svg" : "./assets/images/sun.svg"} />
+          </div>
             <div>
               <h3>Light Mode</h3>
               <p>Pick a clean and classic light theme</p>
@@ -143,7 +145,7 @@ function ThemeArea() {
         <div className="font">
           <div className="font-flex">
             <div>
-              <img src="./assets/images/dark-mode-icon.svg"/>
+            <img src={!theme ? "./assets/images/dark-mode-icon.svg" : "./assets/images/dark.svg"} />
             </div>
             <div>
               <h3>Dark Mode</h3>

@@ -585,13 +585,15 @@ dialog p {
   background-color: rgba(51, 92, 255, 1) !important; 
 }
 
-
-
-
-
-
-
 /* Theme Component */
+
+.theme-area  {
+margin-top: 24px;
+}
+
+.theme-area p {
+  margin-block: 8px 20px;
+}
 
 .dark-mode {
   background-color: rgba(14, 18, 27, 1);
@@ -638,7 +640,7 @@ dialog p {
   }
 
   .buttons button {
-    background-color: rgb(63, 67, 97)
+    background-color: transparent;
   }
 
   .new-note-body input {
