@@ -2,8 +2,8 @@ import { div } from "motion/react-client"
 import { useEffect, useState } from "react"
 
 function Settings() {
-  const [page , setPage] = useState("font")
-  const [font,setFont] = useState("inter")
+  const [page , setPage] = useState("font");
+  const [font,setFont] = useState("inter");
   const [theme,setTheme] = useState(false);
 
   return(
@@ -13,7 +13,7 @@ function Settings() {
         <button onClick={() => setPage('Theme')}><img src={!theme ? "./assets/images/light-mode-icon.svg" : "./assets/images/button-theme-dark.svg"}/></button>
         <button onClick={() => setPage('font')}><img src= {!theme ? "./assets/images/font-icon.svg": "./assets/images/button-font-dark.svg"}/></button>
       </div>
-      {page === "font" ? <FontArea font={font} setFont = {setFont}/> : <ThemeArea theme={theme} setTheme={setTheme}/> }
+      {page === "font" ? <FontArea font={font} setFont = {setFont}/> : <ThemeArea theme={theme} setTheme={setTheme}/>}
     </div>
   )
 }
@@ -107,8 +107,6 @@ function FontArea({font, setFont}) {
 }
 
 function ThemeArea({theme,setTheme}) {
-
- 
 
   useEffect(() => {
     if (theme) {

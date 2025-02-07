@@ -39,7 +39,7 @@ export default function NewNote ({setOpenEditor,openEditor, notes , setNotes}) {
         <div className="note-input">
           <img src="/assets/images/clock-icon.svg"/>
           <h6>Last edited</h6>
-          <input type="text" disabled  placeholder="Not yet saved" />
+          <input className="asd" type="text" disabled  placeholder="Not yet saved" />
         </div>
       </div>
 

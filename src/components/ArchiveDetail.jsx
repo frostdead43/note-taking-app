@@ -24,7 +24,7 @@ function handleCloseArchiveModal() {
   
   function handleRestore(id) {
     const restore = archiveNotes.find(x => x.id === id);
-    setArchiveNotes(archiveNotes.filter(x => x.id !== id))
+    setArchiveNotes(archiveNotes.filter(x => x.id !== id));
     setNotes([...notes, restore]);
    }
 

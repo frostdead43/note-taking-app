@@ -1,14 +1,20 @@
 import { div } from "motion/react-client";
 import { Fragment, useState } from "react";
  function Search({notes}) {
- const [search,setSearch] = useState('')
+ const [search,setSearch] = useState('');
+
+
+//  function handleChange() {
+//    window.location.hash = 
+//  }
 
  function handleSearch(e) {
    setSearch(e.target.value);
    console.log(e.target.value);
  }
 
- const filterSearch = notes.filter(x =>  {
+ 
+  const filterSearch = notes.filter(x =>  {
   const find = x.title.includes(search) || x.tags.includes(search) || x.date.includes(search);
   
 
@@ -42,11 +48,11 @@ import { Fragment, useState } from "react";
 
 function Card({title, tags,date}) {
   return(
-    <Fragment>
+    <div>
       <h3>{title}</h3>
       <h5>{tags}</h5>
       <h6>{date}</h6>
-    </Fragment>
+    </div>
   )
 }
 

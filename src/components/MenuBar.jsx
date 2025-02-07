@@ -7,6 +7,7 @@ import Search from "./Search";
 import Tags from "./Tags";
 import Sidebar from "./Sidebar";
 import NewNote from './NewNote'
+import Details from "./Details";
 
 export default function MenuBar() {
   const [notes, setNotes] = useState([]);
@@ -33,10 +34,12 @@ export default function MenuBar() {
     },
     {
       url:'/Tags',
-      component: <Tags  notes={notes}/>
+      component: <Tags notes={notes}/>
     },
-   
-    
+    {
+      url: "/Details",
+      component: <Details/>
+    }
   ];
   
 

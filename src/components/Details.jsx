@@ -91,8 +91,7 @@ function handleArchive(id) {
             <button onClick={handleDelete}>Delete Note</button>
           </div>
         </dialog>
-      </div>
-      
+      </div> 
     </div>
   )
 }

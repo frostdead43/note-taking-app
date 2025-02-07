@@ -299,6 +299,68 @@ header h2 {
   letter-spacing: -0.20000000298023224px;
 }
 
+.tag-detail {
+  margin-top: 24px;
+}
+
+.tag-detail h2 {
+  color: rgba(82, 88, 102, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.5px;
+}
+
+.tag-detail span {
+  color: rgba(14, 18, 27, 1);
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.5px;
+}
+
+.tag-detail p {
+  color: rgba(43, 48, 59, 1);
+  margin-block: 24px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+.detail-tag {
+  margin-block: 24px;
+}
+
+.detail-tag h3 {
+  color: rgba(14, 18, 27, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+  letter-spacing: -0.30000001192092896px;
+}
+
+.detail-tag h6 {
+  color: rgba(14, 18, 27, 1);
+  background-color: rgba(224, 228, 234, 1);
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: -0.20000000298023224px;
+  margin-block: 12px;
+}
+
+.detail-tag h5 {
+  color: rgba(43, 48, 59, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+
+
 
 /* Search Component */
 
@@ -463,7 +525,10 @@ border-radius: 8px;
 .note-input input {
   border: none;
   outline: none;
+}
 
+.asd {
+  background-color: white;
 }
 
 textarea {
